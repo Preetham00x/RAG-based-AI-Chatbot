@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import formidable from "formidable";
 import fs from "fs";
-import { ChromaClient } from "@chromadb/chroma";
+
 
 export const config = {
   api: {
@@ -16,7 +16,7 @@ export async function POST(req) {
   const file = files.file?.[0];
   const buffer = fs.readFileSync(file.filepath);
 
-  const client = new ChromaClient({ path: process.env.CHROMA_URL });
+
 
   const collection = await client.getOrCreateCollection({
     name: "docs",
