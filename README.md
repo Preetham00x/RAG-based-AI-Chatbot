@@ -78,8 +78,7 @@ Create a file:
 
 Add:
 
-GROQ_API_KEY=your_groq_api_key_here
-CHROMA_URL=http://localhost:8000
+
 
 4️⃣ Start ChromaDB
 
